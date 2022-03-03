@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --dark:#17181A;
+    --light:#fff;
+    --blue:#29A8FF;
+    --btn:#303136;
+    --fontblue:#29A8FF;
+}
+h2{
+    color: var(--light);
+    text-align: center;
+}
+body{
+    /* background: url(../assets/img/bg1.jpg); */
+    background-color: var(--dark);
+    /* background-size: 100% 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    background-color:var(--dark);
+    height: 95vh;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+.view{
+    color: var(--light);
+}
+span{
+    color: var(--fontblue);
+}
+.operate{
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    font-size: 20px;
+}
+.egale{
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+}
+.button{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
+    gap: 10px;
+}
+.calcul{
+    padding: 0 20px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+    height: 100%;
+}
+.button .btngale{
+    grid-column: 3/5 !important;
+    background-color: #1991FF;
+    color: white;
+}
+.button{
+    margin-top: 50px;
+}
+.button button{
+    color: var(--fontblue);
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #303136;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 60px;
+}
+.copyrit{
+    position: absolute;
+    left: -70px;
+    display: none;
+}
+.copyrit h3{
+    font-weight:bold;
+    transform: rotate(-90deg);
+    font-size: 15px;
+}
+.social-media{
+    display: none;
+    position: absolute;
+    bottom: -20px;
+    display: flex;
+    gap: 10px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+.social-media i{
+    font-size: 15px;
+    color: black;
+}
+
+@media screen and (min-width: 600px){
+    body{
+        background: url(../assets/img/bg2.jpg);
+        background-size: cover;
+        justify-content: flex-start;
+        padding-left: 200px;
+    }
+    .calcul{
+        padding: 0 0px;
+    margin-top: 0px;
+    width: 80%;
+    }
+    .container{
+        width: 300px;
+    }
+    .button{
+        margin-top: 0px;
+    }
+    .button button{
+        height: 35px;
+        font-size: 20px;
+    }
+    .social-media{
+        gap: 10px;
+        flex-direction: column;
+        right: 0;
+        bottom: auto;
+    }
+    .social-media i{
+        font-size: 20px;
+    }
+    .copyrit{
+        display: block;
+        left: auto;
+        right: 10px;
+        bottom: 10px;
+    }
+    .copyrit h3{
+        transform: none;
+        font-size: 17px;
+    }
+}
