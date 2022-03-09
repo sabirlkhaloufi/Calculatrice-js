@@ -36,6 +36,7 @@ body{
 }
 .view{
     color: var(--light);
+    height: 80px;
 }
 span{
     color: var(--fontblue);
@@ -96,13 +97,6 @@ span{
 }
 .social-media{
     display: none;
-    position: absolute;
-    bottom: -20px;
-    display: flex;
-    gap: 10px;
-    background-color: white;
-    padding: 5px;
-    border-radius: 10px;
 }
 .social-media i{
     font-size: 15px;
@@ -132,6 +126,13 @@ span{
         font-size: 20px;
     }
     .social-media{
+        position: absolute;
+        bottom: -20px;
+        display: flex;
+        gap: 10px;
+        background-color: white;
+        padding: 5px;
+        border-radius: 10px;
         gap: 10px;
         flex-direction: column;
         right: 0;
@@ -139,6 +140,10 @@ span{
     }
     .social-media i{
         font-size: 20px;
+    }
+    .social-media i:hover{
+        font-size: 22px;
+        transition: .2s ease-in-out;
     }
     .copyrit{
         display: block;
