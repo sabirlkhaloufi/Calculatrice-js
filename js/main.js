@@ -1,3 +1,4 @@
+// declare variables
 let nbr = document.querySelectorAll('.nbr');
 let operation = document.querySelectorAll('.operat');
 let result = document.querySelector('.btngale');
@@ -8,7 +9,7 @@ let affRes = document.querySelector('.affichage');
 let delet = document.querySelector('.delete');
 let res = 0;
 
-
+// functions for calcul
 function somme(nbr1,nbr2){
     return nbr1 + nbr2;
 }
@@ -21,7 +22,11 @@ function multiplication(nbr1,nbr2){
 function sousTraction(nbr1,nbr2){
     return nbr1 - nbr2;
 }
+function modulo(nbr1,nbr2){
+    return nbr1 % nbr2;
+}
 
+// function operate for click sur egale 
 function operate(nbr1,nbr2){
     if(op.innerHTML == '*'){
         res = multiplication(nbr1,nbr2);
@@ -39,6 +44,14 @@ function operate(nbr1,nbr2){
         res = sousTraction(nbr1,nbr2);
         affRes.innerHTML = res;
     }
+    else if(op.innerHTML == '%'){
+        res = sousTraction(nbr1,nbr2);
+        affRes.innerHTML = res;
+    }
+    else if(op.innerHTML == '%'){
+        res = modulo(nbr1,nbr2);
+        affRes.innerHTML = res;
+    }
 }
 
 // calcul operation
@@ -49,20 +62,18 @@ result.addEventListener("click",function(){
 // click numbers
 nbr.forEach(value => {
     value.addEventListener("click",function(){
-        if(op.innerHTML == '*' || op.innerHTML == '-' || op.innerHTML == '+' || op.innerHTML == '/'){
+        if(op.innerHTML == '*' || op.innerHTML == '-' || op.innerHTML == '+' || op.innerHTML == '/' || op.innerHTML == '%'){
             nbr2.innerHTML += value.innerHTML;
         }
         else{
-            if(nbr1.innerHTML == '0'){
-                nbr1.innerHTML = "";
+            nbr1.innerHTML += value.innerHTML;
+            if (nbr1.innerHTML[0] == 0){
+                nbr1.innerHTML = parseFloat(nbr1.innerHTML);
             }
-            else{
-                nbr1.innerHTML += value.innerHTML;
-            }
+            
         }
     })
 });
-
 //click operation 
 operation.forEach(value => {
     value.addEventListener("click",function(){
