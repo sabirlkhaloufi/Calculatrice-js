@@ -72,7 +72,7 @@ nbr.forEach(value => {
             nbr2.innerHTML += value.innerHTML;
         }
         else{
-            nbr1.innerHTML = value.innerHTML;
+            nbr1.innerHTML += value.innerHTML;
             if (nbr1.innerHTML[0] == 0){
                 nbr1.innerHTML = parseFloat(nbr1.innerHTML);
             }
@@ -88,7 +88,7 @@ nbr.forEach(value => {
             nbr2.innerHTML += value.innerHTML;
         }
         else{
-            nbr1.innerHTML = value.innerHTML;
+            nbr1.innerHTML += value.innerHTML;
             if (nbr1.innerHTML[0] == 0){
                 nbr1.innerHTML = parseFloat(nbr1.innerHTML);
             }
