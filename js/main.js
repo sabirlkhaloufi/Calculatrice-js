@@ -6,7 +6,6 @@ let nbr1 = document.querySelector('.nbr1');
 let op = document.querySelector('.op');
 let nbr2 = document.querySelector('.nbr2');
 let affRes = document.querySelector('.affichage');
-let delet = document.querySelector('.delete');
 let res = 0;
 
 // functions for calcul
@@ -84,16 +83,18 @@ nbr.forEach(value => {
 // function pour taper avec clavier
 nbr.forEach(value => {
     value.addEventListener("keydown",function(){
-        if(op.innerHTML == '*' || op.innerHTML == '-' || op.innerHTML == '+' || op.innerHTML == '/' || op.innerHTML == '%'){
-            nbr2.innerHTML += value.innerHTML;
-        }
-        else{
-            nbr1.innerHTML += value.innerHTML;
-            if (nbr1.innerHTML[0] == 0){
-                nbr1.innerHTML = parseFloat(nbr1.innerHTML);
-            }
+        console.log(value.keyCode);
+        
+        // if(op.innerHTML == '*' || op.innerHTML == '-' || op.innerHTML == '+' || op.innerHTML == '/' || op.innerHTML == '%'){
+        //     nbr2.innerHTML += value.innerHTML;
+        // }
+        // else{
+        //     nbr1.innerHTML += value.innerHTML;
+        //     if (nbr1.innerHTML[0] == 0){
+        //         nbr1.innerHTML = parseFloat(nbr1.innerHTML);
+        //     }
             
-        }
+        // }
     })
 });
 
@@ -103,12 +104,12 @@ nbr.forEach(value => {
 operation.forEach(value => {
     value.addEventListener("click",function(){
         if(op.innerHTML === "+" || op.innerHTML === "*" || op.innerHTML === "-" || op.innerHTML === "/" || op.innerHTML === "%"){
-            s = operate(Number(nbr1.innerHTML),Number(nbr2.innerHTML));
-            affRes.innerHTML = s;
+            result = operate(Number(nbr1.innerHTML),Number(nbr2.innerHTML));
+            affRes.innerHTML = result;
             document.querySelector('.nbr1').innerHTML = "";
             document.querySelector('.nbr2').innerHTML = "";
             document.querySelector('.op').innerHTML = "";
-            nbr1.innerHTML = s;
+            nbr1.innerHTML = result;
             op.innerHTML = value.innerHTML;
         }
         else if(nbr1.innerHTML == "0"){
@@ -130,3 +131,9 @@ document.querySelector('.vider').addEventListener("click",function(){
     document.querySelector('.op').innerHTML = "";
     document.querySelector('.affichage').innerHTML = "";
 })
+
+// delet number
+document.querySelector('.delete').addEventListener("click",function(){
+
+})
+

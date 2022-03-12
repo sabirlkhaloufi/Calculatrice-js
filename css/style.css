@@ -16,6 +16,10 @@ h2{
     color: var(--light);
     text-align: center;
 }
+.nbr1,.nbr2,.op{
+    font-size:  25px;
+    font-weight: bold;
+}
 body{
     /* background: url(../assets/img/bg1.jpg); */
     background-color: var(--dark);
