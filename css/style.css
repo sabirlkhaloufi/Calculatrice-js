@@ -114,7 +114,7 @@ button:hover{
 
 @media screen and (min-width: 600px){
     body{
-        background: url(../assets/img/bg2.jpg);
+        background: url(../assets/img/bg.jpg);
         background-size: cover;
         justify-content: flex-start;
         padding-left: 200px;
@@ -164,8 +164,8 @@ button:hover{
     .copyrit{
         display: block;
         left: auto;
-        right: 400px;
-        bottom: 200px;
+        right: 10px;
+        bottom: 10px;
     }
     .copyrit h3{
         font-weight: bold;
