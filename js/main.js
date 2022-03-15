@@ -82,6 +82,9 @@ operation.forEach(value => {
             if(affRes.innerHTML == "error math"){
                 alert("error math");
             }
+            else if(nbr1.innerHTML == 0 && op.innerHTML != "-"){
+                op.innerHTML = value.innerHTML;
+            }
             else{
                 result = operate(Number(nbr1.innerHTML),Number(nbr2.innerHTML));
                 affRes.innerHTML = result;
@@ -105,7 +108,6 @@ operation.forEach(value => {
                 case "-":
                     nbr1.innerHTML = "";
                     op.innerHTML = "-";
-                    console.log(value.innerHTML);
                 break;
             }
         }
